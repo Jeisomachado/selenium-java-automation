@@ -5,11 +5,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public abstract class BateTest {
+
+public abstract class BaseTest {
     
     
-    protected static WebDriver driver;
-    protected static final String URL_BASE = "https://www.google.com";
+    protected  WebDriver driver;
+    protected static final String URL_BASE = "file:///C:/Selenium/sistema/login.html";
 
      @BeforeEach
      protected void iniciar() {
@@ -19,7 +20,7 @@ public abstract class BateTest {
     }
     @AfterEach
     protected void finalizar(){
-        driver.quit();
+        
     }
 
 }

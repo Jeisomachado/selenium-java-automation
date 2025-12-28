@@ -12,9 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.release>21</maven.compiler.release>
     <junit.version>5.11.0</junit.version>
-    <selenium.version>4.21.0</selenium.version>
   </properties>
 
   <dependencies>
@@ -27,11 +26,18 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Selenium 4 (com driver manager automático) -->
+    <!-- Selenium 4.27.0 -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>${selenium.version}</version>
+      <version>4.27.0</version>
+    </dependency>
+
+    <!-- WebDriver Manager -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.6.3</version>
     </dependency>
 
   </dependencies>
