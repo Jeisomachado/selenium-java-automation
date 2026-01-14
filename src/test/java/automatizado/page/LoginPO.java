@@ -1,6 +1,8 @@
 package automatizado.page;
 
 import java.time.Duration;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +32,10 @@ public class LoginPO extends BasePO {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(buttonEntrar));
         buttonEntrar.click();
+    }
+
+    public void escrever (WebElement input, String texto){
+        input.sendKeys(texto + Keys.TAB);
     }
 
     public String obterMensagem() {
