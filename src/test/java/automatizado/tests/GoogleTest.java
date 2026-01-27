@@ -2,22 +2,28 @@ package automatizado.tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
+import automatizado.page.GooglePO;
 import automatizado.test.BaseTest;
 
 public class GoogleTest extends BaseTest {
 
+    private GooglePO googlePage;
+
+    @BeforeEach
+    void prepararTestes() {
+        googlePage = new GooglePO(driver);
+    }
+
     @Test
-    public void devePesquisarNoDuckDuckGo() {
+    void devePesquisarNoDuckDuckGo() {
 
-        WebElement inputPesquisa = driver.findElement(By.name("q"));
-        inputPesquisa.sendKeys("Batata frita" + Keys.ENTER);
+        googlePage.pesquisar("Batata frita");
 
-        String textoPagina = driver.findElement(By.tagName("body")).getText();
+        String textoPagina = googlePage.obterResultadoDaPesquisa();
 
         assertTrue(textoPagina.contains("Protegido"));
     }

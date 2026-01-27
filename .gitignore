@@ -1,0 +1,13 @@
+# Maven
+target/
+
+# Drivers
+drivers/*.exe
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Sistema
+.DS_Store
