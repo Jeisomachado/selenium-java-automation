@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+# Maven
+target/
+
+# Drivers
+drivers/*.exe
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Sistema
+=======
+/target
+/.idea
+/.vscode
+*.log
+*.tmp
+>>>>>>> 054e2a1b531ab946682dec5b848e660f5e6a15cc
+.DS_Store
